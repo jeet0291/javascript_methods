@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= "JavaScript call() Method"
+  p Welcome to #{title} 
+  | /* Creating Object */ <br/> 
+  code var obj = {num:2}; <br/>
+  | <br/> 
+  | /* Function Defination */ <br/> 
+  | &nbsp; var addToThis = function (a){ <br/> 
+  | &nbsp; &nbsp; return this.num + a;  <br/>
+  | &nbsp; }  <br/>
+  | <br/> 
+  | /* Function Calling */ <br/> 
+  | let result = addToThis.call(obj,3); <br/>
+
+  p 
+    b Output for the above function will be as below: 
+
+  p console.log('Result:', result);  // Result: 5
+            
+   
+
